@@ -37,4 +37,4 @@ Standard Kitly OperationDefinition. Rules:
 2. Manifest `id` matches every operation id prefix; `entry` file exists; JSON is valid.
 3. Escape user text interpolated into HTML/SVG (`&` → `&amp;`, `<` → `&lt;`).
 4. Bump manifest `version` on every change; commit — installs/updates are git-based.
-5. To publish: add/update the plugin's entry (id, gitUrl, version, description, tags) in the repository index `M:\Projects\UAI\Kitly\Plugins\Kitly-Plugins\index.json` and commit that repo too.
+5. To publish: add/update the plugin's entry (`{ id, name, description, gitUrl, version, tags }`) in the `plugins` array of the target plugin repository's `index.json`, then commit that repository too. The repository is whichever index repo the user distributes plugins through — ask for its path/URL if it isn't evident (a sibling directory containing an `index.json` with a `plugins` array is the usual layout). Keep the index entry's `version` in lockstep with the manifest's.
