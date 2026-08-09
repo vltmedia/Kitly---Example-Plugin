@@ -1,0 +1,15 @@
+{
+  "id": "kitly-example",
+  "name": "Kitly Example Plugin",
+  "version": "0.1.0",
+  "description": "Reference plugin: two local image operations (Add Text, Create Image Grid) plus a settings contribution.",
+  "author": "UAI",
+  "entry": "index.js",
+  "kitlyApiVersion": 1,
+  "contributes": {
+    "settings": [
+      { "key": "defaultText", "label": "Default Overlay Text", "type": "text", "default": "Kitly" },
+      { "key": "gridGap", "label": "Grid Gap (px)", "type": "number", "default": 8, "min": 0, "max": 64 }
+    ]
+  }
+}
